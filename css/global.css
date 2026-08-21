@@ -1,0 +1,23 @@
+html { scroll-padding-top: 6rem; }
+body { min-width: 320px; background: var(--color-off-white); color: var(--color-black); font-family: var(--font-body); line-height: 1.65; overflow-x: hidden; }
+body.modal-open { overflow: hidden; }
+.container { width: min(calc(100% - 2rem), var(--container-width)); margin-inline: auto; }
+section { padding-block: var(--space-xl); }
+h1, h2, h3 { font-family: var(--font-heading); line-height: 1.05; font-weight: 700; text-wrap: balance; }
+h1 { font-size: clamp(3rem, 14vw, 7rem); } h2 { font-size: clamp(2.15rem, 9vw, 4.5rem); } h3 { font-size: clamp(1.2rem, 4vw, 1.75rem); }
+p { color: var(--color-gray-700); }
+button, a { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid var(--color-cyan); outline-offset: 4px; }
+.skip-link { position: fixed; z-index: 1000; top: .75rem; left: .75rem; padding: .75rem 1rem; border-radius: var(--radius-sm); background: var(--color-white); color: var(--color-black); transform: translateY(-160%); transition: transform var(--transition-fast); }
+.skip-link:focus { transform: translateY(0); }
+.no-js .main-nav { position: static; display: block; visibility: visible; opacity: 1; background: transparent; }
+.no-js .nav-list { display: flex; flex-wrap: wrap; gap: .5rem; }.no-js .nav-list a { font-size: .7rem; }.no-js .menu-toggle { display: none; }
+.eyebrow { display: flex; align-items: center; gap: .75rem; color: var(--color-pink); font-size: .72rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.eyebrow::before { content: ""; width: 2rem; height: 1px; background: var(--gradient-brand); }
+.section-dark { background: var(--color-dark); color: var(--color-white); }
+.section-soft { background: var(--color-gray-100); }
+.section-heading { max-width: 54rem; margin-bottom: var(--space-lg); }
+.section-heading .eyebrow { margin-bottom: var(--space-sm); }
+.section-heading > p:last-child { max-width: 38rem; margin-top: var(--space-sm); }
+.centered { margin-inline: auto; text-align: center; }
+.centered .eyebrow { justify-content: center; }
