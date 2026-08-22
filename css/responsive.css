@@ -1,5 +1,269 @@
-@media (min-width: 36rem) { .hero-actions { flex-direction: row; }.hero-scroll { display: inline; }.drinks-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }.form-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }.field-wide { grid-column: 1/-1; }.drink-detail { grid-template-columns: minmax(12rem,15rem) 1fr; align-items: center; }.social-inner { grid-template-columns: 1fr auto; } }
-@media (min-width: 48rem) { section { padding-block: var(--space-2xl); }.container { width: min(calc(100% - 3rem),var(--container-width)); }.hero { min-height: calc(100svh - 2rem); margin: 1rem; border-radius: var(--radius-lg); }.header-container { min-height: 6rem; }.brand-logo { width: 6.5rem; height: 6.5rem; }.hero-container { padding-bottom: var(--space-lg); }.about-grid { grid-template-columns: 1fr .85fr; align-items: center; gap: var(--space-xl); }.events-grid { grid-template-columns: 1.35fr 1fr; grid-template-rows: repeat(2,18rem); }.event-card-large { grid-row: 1/-1; }.features-grid { grid-template-columns: repeat(3,1fr); }.drinks-grid { grid-template-columns: repeat(4,minmax(0,1fr)); gap: var(--space-sm); }.footer-grid { grid-template-columns: 2fr 1fr 1fr; }.modal-panel { padding: var(--space-lg); }.selection-bar { inset: auto 2rem 2rem auto; min-width: 24rem; } }
-@media (min-width: 62rem) { .menu-toggle { display: none; }.main-nav { position: static; display: block; margin-left: auto; background: none; visibility: visible; opacity: 1; }.nav-list { display: flex; align-items: center; gap: clamp(1.4rem,2.3vw,2.5rem); }.nav-list a { position: relative; padding-block: .8rem; font-size: .8rem; }.nav-list a::after { content: ""; position: absolute; inset: auto 0 .4rem; height: 1px; background: var(--gradient-brand); transform: scaleX(0); transition: transform var(--transition-normal); }.nav-list a:hover::after { transform: scaleX(1); }.header-cta { display: block; padding: .85rem 1.25rem; border: 1px solid rgba(255,255,255,.4); border-radius: var(--radius-full); color: var(--color-white); font-size: .72rem; font-weight: 800; }.hero-overlay { background: linear-gradient(90deg,rgba(8,8,8,.92),rgba(8,8,8,.62) 45%,rgba(8,8,8,.18)); }.drinks-grid { grid-template-columns: repeat(4,1fr); } }
-@media (min-width: 90rem) { .drinks-grid { grid-template-columns: repeat(4,1fr); }.hero { min-height: calc(100svh - 2rem); } }
-@media (max-height: 42rem) and (orientation: landscape) { .hero { min-height: 42rem; }.hero-container { padding-top: 7rem; } }
+/* ─── Mobile pequeno (< 36rem / 576px) ───────────────────────────────────── */
+/* Ajustes base já estão em components.css (mobile first) */
+
+/* ─── Mobile / Tablet pequeno (≥ 36rem / 576px) ─────────────────────────── */
+@media (min-width: 36rem) {
+    .hero-actions {
+        flex-direction: row;
+    }
+
+    .hero-scroll {
+        display: inline;
+    }
+
+    .drinks-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .field-wide {
+        grid-column: 1/-1;
+    }
+
+    .drink-detail {
+        grid-template-columns: minmax(12rem, 15rem) 1fr;
+        align-items: center;
+    }
+
+    .social-inner {
+        grid-template-columns: 1fr auto;
+    }
+
+    /* Imagens de evento: limitar altura em telas maiores */
+    .event-card {
+        min-height: 18rem;
+    }
+}
+
+/* ─── Tablet (≥ 48rem / 768px) ──────────────────────────────────────────── */
+@media (min-width: 48rem) {
+    section {
+        padding-block: var(--space-2xl);
+    }
+
+    .container {
+        width: min(calc(100% - 3rem), var(--container-width));
+    }
+
+    .hero {
+        min-height: 100svh;
+        margin: 0 1rem 1rem;
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    }
+
+    /* Navbar menor no tablet */
+    .header-container {
+        min-height: 4.25rem;
+    }
+
+    .brand-logo {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .hero-container {
+        padding-bottom: var(--space-lg);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr .85fr;
+        align-items: center;
+        gap: var(--space-xl);
+    }
+
+    /* Imagem editorial: altura máxima mais generosa em tablet */
+    .editorial-image img {
+        max-height: 540px;
+    }
+
+    .events-grid {
+        grid-template-columns: 1.35fr 1fr;
+        grid-template-rows: repeat(2, 22rem);
+    }
+
+    /* Remover max-height individual nas cards quando em grid */
+    .event-card {
+        min-height: unset;
+        max-height: unset;
+        height: 100%;
+    }
+
+    .event-card-large {
+        grid-row: 1/-1;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .drinks-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: var(--space-sm);
+    }
+
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .modal-panel {
+        padding: var(--space-lg);
+    }
+
+    .selection-bar {
+        inset: auto 2rem 2rem auto;
+        min-width: 24rem;
+    }
+}
+
+/* ─── Desktop (≥ 62rem / 992px) ─────────────────────────────────────────── */
+@media (min-width: 62rem) {
+    .menu-toggle {
+        display: none;
+    }
+
+    /* Reseta tudo do dropdown mobile e vira inline */
+    .main-nav {
+        position: static;
+        top: auto;
+        right: auto;
+        display: block;
+        width: auto;
+        margin-left: auto;
+        padding: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        align-items: center;
+        gap: clamp(1.2rem, 2vw, 2rem);
+    }
+
+    .nav-list a {
+        position: relative;
+        display: inline-block;
+        padding: .6rem .25rem;
+        border-radius: 0;
+        font-size: .78rem;
+        letter-spacing: .02em;
+        transition: color var(--transition-fast);
+    }
+
+    .nav-list a::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 .15rem;
+        height: 1px;
+        background: var(--gradient-brand);
+        transform: scaleX(0);
+        transition: transform var(--transition-normal);
+    }
+
+    .nav-list a:hover {
+        background: none;
+        color: var(--color-white);
+    }
+
+    .nav-list a:hover::after {
+        transform: scaleX(1);
+    }
+
+    /* Navbar compacta no desktop */
+    .header-container {
+        min-height: 3.75rem;
+    }
+
+    .brand-logo {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .header-cta {
+        display: block;
+        padding: .65rem 1.15rem;
+        border: 1px solid rgba(255, 255, 255, .4);
+        border-radius: var(--radius-full);
+        color: var(--color-white);
+        font-size: .72rem;
+        font-weight: 800;
+        letter-spacing: .04em;
+        white-space: nowrap;
+        transition: background var(--transition-normal), border-color var(--transition-normal);
+    }
+
+    .header-cta:hover {
+        background: rgba(255, 255, 255, .12);
+        border-color: rgba(255, 255, 255, .7);
+    }
+
+    .hero-overlay {
+        background: linear-gradient(90deg, rgba(8, 8, 8, .92), rgba(8, 8, 8, .62) 45%, rgba(8, 8, 8, .18));
+    }
+
+    .drinks-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Imagem editorial: tamanho adequado no desktop */
+    .editorial-image img {
+        max-height: 600px;
+    }
+
+    /* Eventos: grid com alturas controladas */
+    .events-grid {
+        grid-template-rows: repeat(2, 24rem);
+    }
+}
+
+/* ─── Desktop grande (≥ 90rem / 1440px) ─────────────────────────────────── */
+@media (min-width: 90rem) {
+    .drinks-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .hero {
+        min-height: 100svh;
+    }
+
+    .events-grid {
+        grid-template-rows: repeat(2, 26rem);
+    }
+}
+
+/* ─── Landscape com altura reduzida ─────────────────────────────────────── */
+@media (max-height: 42rem) and (orientation: landscape) {
+    .hero {
+        min-height: 42rem;
+    }
+
+    .hero-container {
+        padding-top: 7rem;
+    }
+
+    /* Menu mobile em landscape: layout horizontal */
+    .nav-list {
+        gap: var(--space-md);
+    }
+}
+
+/* ─── Header scrolled: mantém compacto ──────────────────────────────────── */
+.header-scrolled .header-container {
+    min-height: 3.5rem;
+}
+
+.header-scrolled .brand-logo {
+    width: 3rem;
+    height: 3rem;
+    transition: width var(--transition-normal), height var(--transition-normal);
+}
