@@ -10,7 +10,7 @@ export const drinks = [
     { id: "Southside Cocktail", nome: "Southside Cocktail", categoria: "gin", rotulo: "Gin", imagem: "./assets/drinks/southside-cocktail.jpg", ingredientes: ["Gin", "Suco de limão Tahiti", "Xarope de açúcar", "Hortelã"] },
     { id: "Martinez", nome: "Martinez", categoria: "gin", rotulo: "Gin", imagem: "./assets/drinks/martinez.jpg", ingredientes: ["Gin", "Vermute doce", "Licor de Cereja luxardo", "Bitter aromático", "Casca de laranja"] },
     { id: "Gin Fresh", nome: "Gin Fresh", categoria: "gin", rotulo: "Gin", imagem: "./assets/drinks/gin-fresh.jpg", ingredientes: ["Gin", "Suco de limão Siciliano", "Xarope de açúcar", "Lillet blanc"] },
-    { id: "Gibson Mariniti", nome: "Gibson Mariniti", categoria: "gin", rotulo: "Gin", imagem: "./assets/drinks/gibson-martini.png", ingredientes: ["Gin", "Vermute seco", "Cebola em conserva"] },
+    { id: "Gibson Martini", nome: "Gibson Martini", categoria: "gin", rotulo: "Gin", imagem: "./assets/drinks/gibson-martini.png", ingredientes: ["Gin", "Vermute seco", "Cebola em conserva"] },
     { id: "Negroni", nome: "Negroni", categoria: "gin", rotulo: "Gin", imagem: "./assets/drinks/negroni.jpg", ingredientes: ["Gin", "Vermute tinto", "Campari", "Casca de laranja"] },
     { id: "moscow-mule", nome: "Moscow Mule", categoria: "vodka", rotulo: "Vodka", imagem: "./assets/drinks/moscow-mule.jpg", ingredientes: ["Vodka", "Limão", "Xarope de gengibre", "Espuma de gengibre"] },
     { id: "caipiroska", nome: "Caipiroska", categoria: "vodka", rotulo: "Vodka", imagem: "./assets/drinks/caipiroska.jpg", ingredientes: ["Vodka", "Limão", "Açúcar", "Gelo"] },
@@ -37,6 +37,8 @@ export const drinks = [
     { id: "tropical-fresh", nome: "Tropical Fresh", categoria: "sem-alcool", rotulo: "Sem álcool", imagem: "./assets/drinks/tropical-fresh.jpg", ingredientes: ["Abacaxi", "Maracujá", "Hortelã", "Água de coco"] }
 ];
 
+const optimizedImage = (path) => path.replace(/\.(jpe?g|png)$/i, ".webp");
+
 export const getDrink = (id) => drinks.find((drink) => drink.id === id);
 
 export function initDrinks({ openDrink }) {
@@ -50,7 +52,7 @@ export function initDrinks({ openDrink }) {
             const card = document.createElement("button");
             card.type = "button"; card.className = "drink-card"; card.dataset.drinkId = drink.id;
             card.setAttribute("aria-label", `Ver detalhes de ${drink.nome}`);
-            const image = document.createElement("img"); image.src = drink.imagem; image.alt = ""; image.loading = "lazy"; image.decoding = "async";
+            const image = document.createElement("img"); image.src = optimizedImage(drink.imagem); image.alt = ""; image.loading = "lazy"; image.decoding = "async";
             const content = document.createElement("span"); content.className = "drink-card-content";
             const name = document.createElement("p"); name.textContent = drink.nome;
             const hint = document.createElement("span"); hint.textContent = "Ver drink";
@@ -68,7 +70,7 @@ export function initDrinks({ openDrink }) {
 
 export function createDrinkDetail(drink) {
     const wrapper = document.createElement("article"); wrapper.className = "drink-detail";
-    const image = document.createElement("img"); image.src = drink.imagem; image.alt = `Apresentação do drink ${drink.nome}`; image.width = 400; image.height = 400;
+    const image = document.createElement("img"); image.src = optimizedImage(drink.imagem); image.alt = `Apresentação do drink ${drink.nome}`; image.width = 400; image.height = 400;
     const copy = document.createElement("div");
     const category = document.createElement("p"); category.className = "eyebrow"; category.textContent = drink.rotulo;
     const title = document.createElement("h2"); title.id = "drink-modal-title"; title.textContent = drink.nome;
