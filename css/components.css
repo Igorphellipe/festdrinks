@@ -352,14 +352,73 @@
     max-height: 480px;
     overflow: hidden;
     border-radius: var(--radius-md);
+    background-position: center;
+    background-size: cover;
 }
 
-.event-card img {
+.event-card-large { background-image: url("../assets/videos/poster-01.webp"); }
+.event-card-top { background-image: url("../assets/videos/poster-02.webp"); }
+.event-card-bottom { background-image: url("../assets/videos/poster-03.webp"); }
+
+.event-card video {
     width: 100%;
     height: 100%;
     position: absolute;
     object-fit: cover;
+    display: block;
+    opacity: 0;
     transition: transform var(--transition-slow);
+}
+
+.event-card.is-playing video { opacity: 1; }
+
+.event-card-large video { object-position: center 50%; }
+.event-card-top video { object-position: center 50%; }
+.event-card-bottom video { object-position: center 50%; }
+
+.event-card video.is-unavailable { display: none; }
+
+.event-play { display: none; }
+.event-card.is-unavailable .event-play { display: none; }
+
+@media (hover: none), (pointer: coarse) {
+    .event-play {
+        display: grid;
+        place-items: center;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        width: 3rem;
+        height: 3rem;
+        padding: 0;
+        transform: translate(-50%, -50%);
+        border: 1px solid rgba(255, 255, 255, .7);
+        border-radius: 50%;
+        background: rgba(0, 0, 0, .32);
+        color: white;
+        cursor: pointer;
+    }
+
+    .event-play::after {
+        content: "";
+        width: 0;
+        height: 0;
+        margin-left: .2rem;
+        border-top: .42rem solid transparent;
+        border-bottom: .42rem solid transparent;
+        border-left: .65rem solid currentColor;
+    }
+
+    .event-card.is-playing .event-play { opacity: .55; }
+    .event-card.is-playing .event-play::after {
+        width: .55rem;
+        height: .85rem;
+        margin: 0;
+        border: 0;
+        border-left: .18rem solid currentColor;
+        border-right: .18rem solid currentColor;
+    }
 }
 
 .event-card::after {
@@ -387,8 +446,13 @@
     color: var(--color-white);
 }
 
-.event-card:hover img {
+.event-card:hover video {
     transform: scale(1.035);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .event-card video { display: none; }
+    .event-play { display: none; }
 }
 
 .section-cta {
