@@ -19,7 +19,8 @@ Depois acesse `http://localhost:8000`.
 - Imagens do Hero: substitua os arquivos em `assets/hero/` mantendo os nomes ou ajuste as classes em `css/components.css`.
 - Imagens de eventos e drinks: os assets atuais são placeholders temporários; altere os caminhos no HTML e em `js/drinks.js`.
 - Instagram e dados institucionais: atualize os links e textos em `index.html`.
-- Canonical: descomente e configure a URL pública indicada no `<head>` de `index.html`.
+- SEO: defina o domínio público no canonical do `<head>`, no `robots.txt` e crie um `sitemap.xml` com URLs absolutas antes da publicação.
+- WhatsApp: substitua `55XXXXXXXXXXX` no link do rodapé e em `js/whatsapp.js` pelo número com DDI + DDD, apenas dígitos.
 
 ## Estrutura
 

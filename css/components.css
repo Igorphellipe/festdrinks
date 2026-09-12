@@ -528,8 +528,23 @@
 }
 
 .text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
     font-size: 1.15rem;
     font-weight: 800;
+}
+
+.brand-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex: none;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
 }
 
 .site-footer {
