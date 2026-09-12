@@ -120,6 +120,23 @@
 
 /* ─── Desktop (≥ 62rem / 992px) ─────────────────────────────────────────── */
 @media (min-width: 62rem) {
+    .hero-slide {
+        background-position: center;
+        background-size: cover;
+    }
+
+    .hero-slide-1 {
+        background-image: url("../assets/hero/hero-desktop-01.webp");
+    }
+
+    .hero-slide-2 {
+        background-image: url("../assets/hero/hero-desktop-02.webp");
+    }
+
+    .hero-slide-3 {
+        background-image: url("../assets/hero/hero-desktop-03.webp");
+    }
+
     .menu-toggle {
         display: none;
     }

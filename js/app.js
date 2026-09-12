@@ -1,7 +1,9 @@
 import { initAnimations } from "./animations.js";
 import { initHeroCarousel } from "./carousel.js";
 import { initDrinks } from "./drinks.js";
+import { initEventVideos } from "./events.js";
 import { initModals } from "./modal.js";
+import { buildWhatsAppContactUrl } from "./whatsapp.js";
 
 document.documentElement.classList.remove("no-js"); document.documentElement.classList.add("js");
 const initMenu = () => {
@@ -13,5 +15,6 @@ const initMenu = () => {
     const updateHeader = () => header?.classList.toggle("header-scrolled", scrollY > 24); updateHeader(); addEventListener("scroll", updateHeader, { passive: true });
     addEventListener("resize", () => { if (innerWidth >= 992) close(); });
 };
-const modals = initModals(); initDrinks({ openDrink: modals.openDrink }); initMenu(); initHeroCarousel(); initAnimations();
+const modals = initModals(); initDrinks({ openDrink: modals.openDrink }); initMenu(); initHeroCarousel(); initAnimations(); initEventVideos();
+document.querySelectorAll("[data-whatsapp-contact]").forEach((link) => { link.href = buildWhatsAppContactUrl(); });
 const year = document.querySelector("[data-current-year]"); if (year) year.textContent = new Date().getFullYear();
