@@ -163,11 +163,11 @@
 
 .hero-slide {
     position: absolute;
-    inset: -3%;
+    inset: 0%;
     background-position: center;
     background-size: cover;
     opacity: 0;
-    transform: scale(1.04);
+    transform: scale(1.01);
     transition: opacity 1.4s ease, transform 7s ease;
 }
 
@@ -568,6 +568,34 @@
     gap: .5rem;
 }
 
+.footer-grid .footer-social-links {
+    display: flex;
+    flex-direction: row;
+    gap: .65rem;
+}
+
+.social-icon-link {
+    display: inline-flex;
+    width: 2.75rem;
+    height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, .22);
+    border-radius: 50%;
+    transition: border-color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+}
+
+.social-icon-link:hover {
+    border-color: var(--color-cyan);
+    background: rgba(255, 255, 255, .08);
+    transform: translateY(-2px);
+}
+
+.social-icon-link svg {
+    width: 1.25rem;
+    fill: currentColor;
+}
+
 .footer-bottom {
     display: flex;
     flex-wrap: wrap;
@@ -603,6 +631,47 @@
 .selection-bar button {
     color: var(--color-cyan);
     font-weight: 800;
+}
+
+.whatsapp-floating {
+    position: fixed;
+    z-index: 89;
+    right: 1rem;
+    bottom: 1rem;
+    display: flex;
+    width: 3.5rem;
+    height: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #25d366;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+    animation: whatsapp-float 3s ease-in-out infinite;
+    transition: bottom var(--transition-normal), box-shadow var(--transition-fast);
+}
+
+.whatsapp-floating:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .34);
+    animation-play-state: paused;
+}
+
+.whatsapp-floating svg {
+    width: 1.75rem;
+    fill: currentColor;
+}
+
+.selection-bar:not([hidden]) + .whatsapp-floating {
+    bottom: 6rem;
+}
+
+@keyframes whatsapp-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .whatsapp-floating { animation: none; }
 }
 
 .modal {
@@ -657,6 +726,11 @@
 
 .drink-detail .eyebrow {
     margin-bottom: .6rem;
+}
+
+.drink-description {
+    margin-top: .75rem;
+    color: var(--color-gray-700);
 }
 
 .ingredients {
