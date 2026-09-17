@@ -60,7 +60,15 @@ export function initModals() {
     };
     subscribeSelection((ids) => { if (selectionBar && selectionCount) { selectionCount.textContent = ids.length; selectionBar.hidden = ids.length === 0; } renderBudgetDrinks(); });
     const rememberAndOpen = (dialog, trigger) => { lastTrigger = trigger || document.activeElement; openDialog(dialog); };
-    const close = (dialog) => { closeDialog(dialog); lastTrigger?.focus?.(); };
+    const resetEmptyBudgetForm = (dialog) => {
+        if (dialog !== budgetModal || getSelection().length || !form) return;
+        form.reset();
+        form.querySelectorAll("[aria-invalid]").forEach((field) => field.removeAttribute("aria-invalid"));
+        form.querySelectorAll(".field-error").forEach((error) => { error.textContent = ""; });
+        budgetView = "catalog";
+        renderBudgetDrinks();
+    };
+    const close = (dialog) => { resetEmptyBudgetForm(dialog); closeDialog(dialog); lastTrigger?.focus?.(); };
     document.querySelectorAll("[data-close-modal]").forEach((button) => button.addEventListener("click", () => close(button.closest("dialog"))));
     [drinkModal, budgetModal].forEach((dialog) => {
         dialog?.addEventListener("click", (event) => { if (event.target === dialog) close(dialog); });
