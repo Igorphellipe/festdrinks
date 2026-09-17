@@ -523,6 +523,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     opacity: .76;
     transition: transform var(--transition-slow);
 }
@@ -550,7 +551,7 @@
 }
 
 .drink-card-new::before {
-    content: "NOVO - adicionar imagem";
+    content: "NOVO";
     position: absolute;
     z-index: 2;
     top: .7rem;
@@ -728,6 +729,25 @@
     font-size: .72rem;
 }
 
+.developer-footer {
+    margin-top: var(--space-md);
+    padding-top: var(--space-sm);
+    border-top: 1px solid rgba(255, 255, 255, .06);
+    color: var(--color-gray-500);
+    font-size: .68rem;
+    text-align: center;
+}
+
+.developer-footer a {
+    color: var(--color-gray-300);
+    transition: color var(--transition-fast);
+}
+
+.developer-footer a:hover,
+.developer-footer a:focus-visible {
+    color: var(--color-cyan);
+}
+
 .selection-bar {
     position: fixed;
     z-index: 90;
@@ -842,6 +862,7 @@
     aspect-ratio: 1;
     border-radius: var(--radius-md);
     object-fit: cover;
+    object-position: center;
 }
 
 .drink-detail .eyebrow {
@@ -921,17 +942,45 @@
 }
 
 .budget-drink-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     gap: .5rem;
     margin-top: var(--space-sm);
+    padding: .75rem;
+    border: 1px solid var(--color-gray-300);
+    border-radius: var(--radius-sm);
 }
 
 .budget-drink-list button {
     padding: .5rem .7rem;
+    border: 1px solid transparent;
     border-radius: var(--radius-full);
     background: var(--color-gray-100);
     font-size: .72rem;
+}
+
+.budget-drink-list.showing-selection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.budget-drink-list.showing-selection button {
+    border-color: var(--color-gray-300);
+}
+
+.budget-drink-group + .budget-drink-group {
+    padding-top: .75rem;
+    border-top: 1px solid var(--color-gray-300);
+}
+
+.budget-drink-group h3 {
+    margin-bottom: .5rem;
+    font-size: .76rem;
+}
+
+.budget-drink-group-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
 }
 
 .form-submit {

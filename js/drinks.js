@@ -36,24 +36,24 @@ export const drinks = [
     { id: "mojito-zero", nome: "Mojito sem Álcool", categoria: "sem-alcool", rotulo: "Sem álcool", imagem: "./assets/drinks/sem-alcool/mojito.webp", ingredientes: ["Limão", "Hortelã", "Água com gás", "Açúcar"] },
     { id: "tropical-fresh", nome: "Tropical Fresh", categoria: "sem-alcool", rotulo: "Sem álcool", imagem: "./assets/drinks/sem-alcool/tropical-fresh.webp", ingredientes: ["Abacaxi", "Maracujá", "Hortelã", "Água de coco"] },
 
-    { id: "hugo-spritz", nome: "Hugo Spritz", categoria: "espumantes", rotulo: "Espumantes", novo: true, ingredientes: ["Licor de flor de sabugueiro", "Prosecco", "Água com gás", "Hortelã", "Limão"] },
-    { id: "limoncello-spritz", nome: "Limoncello Spritz", categoria: "espumantes", rotulo: "Espumantes", novo: true, ingredientes: ["Limoncello", "Prosecco", "Água com gás", "Limão siciliano"] },
-    { id: "mimosa", nome: "Mimosa", categoria: "espumantes", rotulo: "Espumantes", novo: true, ingredientes: ["Suco de laranja coado", "Espumante"] },
-    { id: "lillet-spritz", nome: "Lillet Spritz", categoria: "espumantes", rotulo: "Espumantes", novo: true, ingredientes: ["Lillet Blanc", "Água com gás", "Prosecco", "Laranja"] },
-    { id: "aperol-spritz", nome: "Aperol Spritz", categoria: "espumantes", rotulo: "Espumantes", novo: true, ingredientes: ["Aperol", "Água com gás", "Prosecco", "Laranja"] },
-    { id: "kir-royal", nome: "Kir Royal", categoria: "espumantes", rotulo: "Espumantes", novo: true, ingredientes: ["Vinho branco", "Licor de cassis"] },
-    { id: "bellini", nome: "Bellini", categoria: "espumantes", rotulo: "Espumantes", novo: true, ingredientes: ["Suco de pêssego", "Champanhe"] },
-    { id: "bacardi-cocktail", nome: "Bacardi Cocktail", categoria: "rum", rotulo: "Rum", novo: true, ingredientes: ["Rum branco", "Suco de limão", "Grenadine"] },
-    { id: "cuba-libre", nome: "Cuba Libre", categoria: "rum", rotulo: "Rum", novo: true, ingredientes: ["Rum branco", "Cola", "Limão"] },
-    { id: "daiquiri", nome: "Daiquiri", categoria: "rum", rotulo: "Rum", novo: true, ingredientes: ["Rum branco", "Suco de limão", "Xarope de açúcar"] },
-    { id: "dark-and-stormy", nome: "Dark & Stormy", categoria: "rum", rotulo: "Rum", novo: true, ingredientes: ["Rum escuro", "Ginger Beer", "Limão", "Bitter Aromático Angostura"] },
-    { id: "kingston-negroni", nome: "Kingston Negroni", categoria: "rum", rotulo: "Rum", novo: true, ingredientes: ["Rum envelhecido", "Vermute doce", "Campari"] },
-    { id: "pina-colada", nome: "Piña Colada", categoria: "rum", rotulo: "Rum", novo: true, ingredientes: ["Rum branco", "Abacaxi", "Leite de coco", "Xarope de açúcar"] },
-    { id: "queens-park-swizzle", nome: "Queen's Park Swizzle", categoria: "rum", rotulo: "Rum", novo: true, ingredientes: ["Rum envelhecido", "Suco de limão", "Xarope de açúcar", "Hortelã", "Angostura Aromatic Bitters"] },
-    { id: "rum-fashioned", nome: "Rum Fashioned", categoria: "rum", rotulo: "Rum", novo: true, ingredientes: ["Rum envelhecido", "Açúcar", "Angostura Bitters Cacau", "Água com gás", "Bitter de laranja"] },
-    { id: "berry-fizz", nome: "Berry Fizz", categoria: "sem-alcool", rotulo: "Sem álcool", novo: true, ingredientes: ["Frutas vermelhas", "Suco de limão", "Xarope de açúcar", "Água com gás"] },
-    { id: "pineapple-mint-cooler", nome: "Pineapple Mint Cooler", categoria: "sem-alcool", rotulo: "Sem álcool", novo: true, ingredientes: ["Suco de abacaxi", "Limão", "Hortelã", "Xarope de açúcar", "Água com gás"] },
-    { id: "tropical-sunset", nome: "Tropical Sunset", categoria: "sem-alcool", rotulo: "Sem álcool", novo: true, ingredientes: ["Suco de laranja", "Suco de abacaxi", "Grenadine", "Água com gás"] },
+    { id: "hugo-spritz", nome: "Hugo Spritz", categoria: "espumantes", rotulo: "Espumantes", imagem: "./assets/drinks/espumante/hugo-spritz.webp", novo: true, ingredientes: ["Licor de flor de sabugueiro", "Prosecco", "Água com gás", "Hortelã", "Limão"] },
+    { id: "limoncello-spritz", nome: "Limoncello Spritz", categoria: "espumantes", rotulo: "Espumantes", imagem: "./assets/drinks/espumante/limoncello-spritz.webp", novo: true, ingredientes: ["Limoncello", "Prosecco", "Água com gás", "Limão siciliano"] },
+    { id: "mimosa", nome: "Mimosa", categoria: "espumantes", rotulo: "Espumantes", imagem: "./assets/drinks/espumante/mimosa.webp", novo: true, ingredientes: ["Suco de laranja coado", "Espumante"] },
+    { id: "lillet-spritz", nome: "Lillet Spritz", categoria: "espumantes", rotulo: "Espumantes", imagem: "./assets/drinks/espumante/lillet-spritz.webp", novo: true, ingredientes: ["Lillet Blanc", "Água com gás", "Prosecco", "Laranja"] },
+    { id: "aperol-spritz", nome: "Aperol Spritz", categoria: "espumantes", rotulo: "Espumantes", imagem: "./assets/drinks/espumante/Aperol-spritz.webp", novo: true, ingredientes: ["Aperol", "Água com gás", "Prosecco", "Laranja"] },
+    { id: "kir-royal", nome: "Kir Royal", categoria: "espumantes", rotulo: "Espumantes", imagem: "./assets/drinks/espumante/kir-royal.webp", novo: true, ingredientes: ["Vinho branco", "Licor de cassis"] },
+    { id: "bellini", nome: "Bellini", categoria: "espumantes", rotulo: "Espumantes", imagem: "./assets/drinks/espumante/bellini.webp", novo: true, ingredientes: ["Suco de pêssego", "Champanhe"] },
+    { id: "bacardi-cocktail", nome: "Bacardi Cocktail", categoria: "rum", rotulo: "Rum", imagem: "./assets/drinks/rum/bacardi-cocktail.webp", novo: true, ingredientes: ["Rum branco", "Suco de limão", "Grenadine"] },
+    { id: "cuba-libre", nome: "Cuba Libre", categoria: "rum", rotulo: "Rum", imagem: "./assets/drinks/rum/cuba-libre.webp", novo: true, ingredientes: ["Rum branco", "Cola", "Limão"] },
+    { id: "daiquiri", nome: "Daiquiri", categoria: "rum", rotulo: "Rum", imagem: "./assets/drinks/rum/daiquiri.webp", novo: true, ingredientes: ["Rum branco", "Suco de limão", "Xarope de açúcar"] },
+    { id: "dark-and-stormy", nome: "Dark & Stormy", categoria: "rum", rotulo: "Rum", imagem: "./assets/drinks/rum/dark-stormy.webp", novo: true, ingredientes: ["Rum escuro", "Ginger Beer", "Limão", "Bitter Aromático Angostura"] },
+    { id: "kingston-negroni", nome: "Kingston Negroni", categoria: "rum", rotulo: "Rum", imagem: "./assets/drinks/rum/kingston-negroni.webp", novo: true, ingredientes: ["Rum envelhecido", "Vermute doce", "Campari"] },
+    { id: "pina-colada", nome: "Piña Colada", categoria: "rum", rotulo: "Rum", imagem: "./assets/drinks/rum/pina-colada.webp", novo: true, ingredientes: ["Rum branco", "Abacaxi", "Leite de coco", "Xarope de açúcar"] },
+    { id: "queens-park-swizzle", nome: "Queen's Park Swizzle", categoria: "rum", rotulo: "Rum", imagem: "./assets/drinks/rum/queens-park-swizzle.webp", novo: true, ingredientes: ["Rum envelhecido", "Suco de limão", "Xarope de açúcar", "Hortelã", "Angostura Aromatic Bitters"] },
+    { id: "rum-fashioned", nome: "Rum Fashioned", categoria: "rum", rotulo: "Rum", imagem: "./assets/drinks/rum/rum-fashioned.webp", novo: true, ingredientes: ["Rum envelhecido", "Açúcar", "Angostura Bitters Cacau", "Água com gás", "Bitter de laranja"] },
+    { id: "berry-fizz", nome: "Berry Fizz", categoria: "sem-alcool", rotulo: "Sem álcool", imagem: "./assets/drinks/sem-alcool/berry-spritz.webp", novo: true, ingredientes: ["Frutas vermelhas", "Suco de limão", "Xarope de açúcar", "Água com gás"] },
+    { id: "pineapple-mint-cooler", nome: "Pineapple Mint Cooler", categoria: "sem-alcool", rotulo: "Sem álcool", imagem: "./assets/drinks/sem-alcool/pineaple-mint-cooler.webp", novo: true, ingredientes: ["Suco de abacaxi", "Limão", "Hortelã", "Xarope de açúcar", "Água com gás"] },
+    { id: "tropical-sunset", nome: "Tropical Sunset", categoria: "sem-alcool", rotulo: "Sem álcool", imagem: "./assets/drinks/sem-alcool/tropical-sunset.webp", novo: true, ingredientes: ["Suco de laranja", "Suco de abacaxi", "Grenadine", "Água com gás"] },
     { id: "black-manhattan", nome: "Black Manhattan", categoria: "whisky", rotulo: "Whisky", novo: true, ingredientes: ["Bourbon Whiskey", "Amaro Italiano", "Angostura Aromatic Bitters", "Angostura Orange Bitters"] },
     { id: "boulevardier", nome: "Boulevardier", categoria: "whisky", rotulo: "Whisky", novo: true, ingredientes: ["Bourbon Whiskey", "Campari", "Vermute doce", "Laranja"] },
     { id: "gold-rush", nome: "Gold Rush", categoria: "whisky", rotulo: "Whisky", novo: true, ingredientes: ["Bourbon Whisky", "Suco de limão siciliano", "Xarope de mel"] },
@@ -85,11 +85,47 @@ export const drinks = [
     { id: "pisco-sour", nome: "Pisco Sour", categoria: "pisco", rotulo: "Pisco", novo: true, ingredientes: ["Pisco", "Xarope de açúcar", "Suco de limão siciliano", "Clara de ovo", "Bitter aromático"] },
 
     // Opções adicionais: altere nome, imagem, descrição e itens conforme o serviço oferecido.
-    { id: "espumante", nome: "Espumante", categoria: "espumantes", rotulo: "Espumantes", imagem: "./assets/hero/hero-02.webp", descricao: "Espumantes selecionados para brindar os momentos especiais do seu evento.", ingredientes: ["Rótulo a definir", "Quantidade conforme o número de convidados", "Serviço gelado"] },
+
     { id: "mao-de-obra", nome: "Equipe de bar", categoria: "mao-de-obra", rotulo: "Mão de obra", imagem: "./assets/servicos/mao-de-obra.webp", descricao: "Equipe especializada para preparar e servir os drinks durante todo o evento.", ingredientes: ["Bartenders", "Auxiliares de bar", "Montagem e organização"] },
     { id: "balcao-01", nome: "Balcão para eventos", categoria: "balcoes", rotulo: "Balcões", imagem: "./assets/servicos/balcao-01.webp", descricao: "Estrutura de balcão para compor o bar e valorizar a apresentação do evento.", ingredientes: ["Modelo - Balcão Branco com Moldura Marrom", "Montagem no local", "Acabamento personalizado"] },
     { id: "balcao-02", nome: "Balcão para eventos", categoria: "balcoes", rotulo: "Balcões", imagem: "./assets/servicos/balcao-02.webp", descricao: "Estrutura de balcão para compor o bar e valorizar a apresentação do evento.", ingredientes: ["Modelo - Balcão Trançado com Tampo de vidro", "Montagem no local", "Acabamento personalizado"] }
 ];
+
+const imagensDosNovosDrinks = {
+    "black-manhattan": "./assets/drinks/whisky/black-manhattan.webp",
+    boulevardier: "./assets/drinks/whisky/boulevardie.webp",
+    "gold-rush": "./assets/drinks/whisky/gold-rush.webp",
+    "irish-coffee": "./assets/drinks/whisky/irish-coffee.webp",
+    "jack-lemonade": "./assets/drinks/whisky/jack-lemonade.webp",
+    manhattan: "./assets/drinks/whisky/manhattan.webp",
+    "mint-julep": "./assets/drinks/whisky/mint-julep.webp",
+    "new-york-sour-i": "./assets/drinks/whisky/new-york-sour-I.webp",
+    "new-york-sour-ii": "./assets/drinks/whisky/new-york-sour-II.webp",
+    "old-fashioned": "./assets/drinks/whisky/old-fashioned.webp",
+    "paper-plane": "./assets/drinks/whisky/paper-plane.webp",
+    "rusty-nail": "./assets/drinks/whisky/rusty-nail.webp",
+    sazerac: "./assets/drinks/whisky/sazerac.webp",
+    "scofflaw-cocktail": "./assets/drinks/whisky/scofflaw-cocktail.webp",
+    "whisky-fix": "./assets/drinks/whisky/whiskey-fix.webp",
+    "whisky-sour": "./assets/drinks/whisky/whisky-sour.webp",
+    "tequila-sunrise": "./assets/drinks/tequila/tequila-sunrise.webp",
+    "tequila-manga-pimenta": "./assets/drinks/tequila/tequila-manga-pimenta.webp",
+    "tequila-blue-margarita": "./assets/drinks/tequila/tequila-blue-marguerita.webp",
+    cucaracha: "./assets/drinks/tequila/cucaracha.webp",
+    "paloma-cocktail": "./assets/drinks/tequila/paloma-cocktail.webp",
+    "tequila-margarita": "./assets/drinks/tequila/tequila-margarita.webp",
+    "amaretto-sour": "./assets/drinks/whisky/amaretto-sour.webp",
+    "madame-paulista": "./assets/drinks/cachaca/Madame-paulista.webp",
+    "ginga-na-pinga": "./assets/drinks/cachaca/Ginga-na-Pinga.webp",
+    "cura-tudo": "./assets/drinks/cachaca/cura-tudo.webp",
+    macunaima: "./assets/drinks/cachaca/macunaíma.webp",
+    "brandy-flip": "./assets/drinks/brandy-flip.webp",
+    "pisco-sour": "./assets/drinks/pisco.webp"
+};
+
+drinks.forEach((drink) => {
+    drink.imagem ??= imagensDosNovosDrinks[drink.id];
+});
 
 export const getDrink = (id) => drinks.find((drink) => drink.id === id);
 
@@ -98,8 +134,8 @@ export function initDrinks({ openDrink }) {
     const filters = document.querySelectorAll("[data-filter]");
     if (!grid) return;
 
-    const render = (filter = "todos") => {
-        const visible = filter === "todos" ? drinks : drinks.filter((drink) => drink.categoria === filter);
+    const render = (filter = "gin") => {
+        const visible = drinks.filter((drink) => drink.categoria === filter);
         grid.replaceChildren(...visible.map((drink) => {
             const card = document.createElement("button");
             card.type = "button"; card.className = `drink-card${drink.novo ? " drink-card-new" : ""}`; card.dataset.drinkId = drink.id;
@@ -121,7 +157,8 @@ export function initDrinks({ openDrink }) {
         render(button.dataset.filter);
     }));
     grid.addEventListener("click", (event) => { const card = event.target.closest("[data-drink-id]"); if (card) openDrink(getDrink(card.dataset.drinkId)); });
-    render();
+    const activeFilter = document.querySelector("[data-filter].filter-active")?.dataset.filter ?? "gin";
+    render(activeFilter);
 }
 
 export function createDrinkDetail(drink) {
