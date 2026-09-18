@@ -124,7 +124,7 @@ const imagensDosNovosDrinks = {
 };
 
 drinks.forEach((drink) => {
-    drink.imagem ??= imagensDosNovosDrinks[drink.id];
+    if (!drink.imagem) drink.imagem = imagensDosNovosDrinks[drink.id];
 });
 
 export const getDrink = (id) => drinks.find((drink) => drink.id === id);
@@ -136,7 +136,7 @@ export function initDrinks({ openDrink }) {
 
     const render = (filter = "gin") => {
         const visible = drinks.filter((drink) => drink.categoria === filter);
-        grid.replaceChildren(...visible.map((drink) => {
+        const cards = visible.map((drink) => {
             const card = document.createElement("button");
             card.type = "button"; card.className = `drink-card${drink.novo ? " drink-card-new" : ""}`; card.dataset.drinkId = drink.id;
             card.setAttribute("aria-label", `Ver detalhes de ${drink.nome}`);
@@ -149,7 +149,9 @@ export function initDrinks({ openDrink }) {
             const name = document.createElement("p"); name.textContent = drink.nome;
             const hint = document.createElement("span"); hint.textContent = "Ver drink";
             content.append(name, hint); card.append(content); return card;
-        }));
+        });
+        grid.textContent = "";
+        cards.forEach((card) => grid.appendChild(card));
     };
 
     filters.forEach((button) => button.addEventListener("click", () => {
@@ -157,7 +159,8 @@ export function initDrinks({ openDrink }) {
         render(button.dataset.filter);
     }));
     grid.addEventListener("click", (event) => { const card = event.target.closest("[data-drink-id]"); if (card) openDrink(getDrink(card.dataset.drinkId)); });
-    const activeFilter = document.querySelector("[data-filter].filter-active")?.dataset.filter ?? "gin";
+    const activeButton = document.querySelector("[data-filter].filter-active");
+    const activeFilter = activeButton ? activeButton.dataset.filter : "gin";
     render(activeFilter);
 }
 
@@ -168,7 +171,7 @@ export function createDrinkDetail(drink) {
     const copy = document.createElement("div");
     const category = document.createElement("p"); category.className = "eyebrow"; category.textContent = drink.rotulo;
     const title = document.createElement("h2"); title.id = "drink-modal-title"; title.textContent = drink.nome;
-    const description = document.createElement("p"); description.className = "drink-description"; description.textContent = drink.descricao ?? "";
+    const description = document.createElement("p"); description.className = "drink-description"; description.textContent = drink.descricao || "";
     const list = document.createElement("ul"); list.className = "ingredients"; drink.ingredientes.forEach((item) => { const li = document.createElement("li"); li.textContent = item; list.append(li); });
     const button = document.createElement("button"); button.type = "button"; button.className = "button button-dark";
     const syncLabel = () => { button.textContent = isSelected(drink.id) ? "Remover do orçamento" : "Adicionar ao orçamento"; };

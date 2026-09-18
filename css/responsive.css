@@ -1,6 +1,16 @@
 /* ─── Mobile pequeno (< 36rem / 576px) ───────────────────────────────────── */
 /* Ajustes base já estão em components.css (mobile first) */
 
+@media (max-width: 35.999rem) {
+    .budget-modal {
+        width: calc(100% - 2rem);
+    }
+
+    .budget-panel {
+        padding: 1rem;
+    }
+}
+
 /* ─── Mobile / Tablet pequeno (≥ 36rem / 576px) ─────────────────────────── */
 @media (min-width: 36rem) {
     .hero-actions {
@@ -26,6 +36,16 @@
     .drink-detail {
         grid-template-columns: minmax(12rem, 15rem) 1fr;
         align-items: center;
+    }
+
+    .drink-detail img {
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    .drink-detail-placeholder {
+        min-height: 20rem;
+        height: auto;
     }
 
     .social-inner {

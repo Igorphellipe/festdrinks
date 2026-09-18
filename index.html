@@ -10,6 +10,9 @@
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="FestDrinks">
     <meta name="theme-color" content="#111111">
+    <script>
+        document.documentElement.className = document.documentElement.className.replace("no-js", "js");
+    </script>
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="FestDrinks">
@@ -285,7 +288,7 @@
                 <p class="eyebrow">Solicite seu orçamento</p>
                 <h2 id="budget-title">Conte sobre o seu evento.</h2>
             </div>
-            <form data-budget-form novalidate>
+            <form id="budget-form" data-budget-form novalidate>
                 <div class="form-grid"><label class="field field-wide">Nome <input name="nome" type="text"
                             autocomplete="name" required><span class="field-error"></span></label><label
                         class="field">Data do evento <input name="data" type="date" required><span

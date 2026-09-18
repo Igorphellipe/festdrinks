@@ -67,7 +67,11 @@ export function initEventVideos() {
         cards.forEach((card) => observer.observe(card));
     }
 
-    reducedMotion.addEventListener?.("change", pause);
-    desktop.addEventListener?.("change", pause);
+    const listenForChange = (query) => {
+        if (query.addEventListener) query.addEventListener("change", pause);
+        else if (query.addListener) query.addListener(pause);
+    };
+    listenForChange(reducedMotion);
+    listenForChange(desktop);
     document.addEventListener("visibilitychange", () => { if (document.hidden) pause(); });
 }
