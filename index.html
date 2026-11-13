@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bar de Drinks para Eventos | FestDrinks</title>
+    <title>Bar de Drinks para Eventos em Brasília DF | FestDrinks</title>
     <meta name="description"
-        content="Bar de drinks para casamentos, aniversários, eventos corporativos e formaturas. A FestDrinks leva coquetelaria, bartenders e estrutura completa para o seu evento.">
+        content="Bar de drinks para eventos em Brasília/DF: casamentos, aniversários e eventos corporativos, com bartenders, coquetelaria e opções sem álcool.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="FestDrinks">
     <meta name="theme-color" content="#111111">
@@ -16,23 +16,25 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="FestDrinks">
-    <meta property="og:title" content="Bar de Drinks para Eventos | FestDrinks">
+    <meta property="og:title" content="Bar de Drinks para Eventos em Brasília DF | FestDrinks">
     <meta property="og:description"
-        content="Bar de drinks, bartenders e coquetelaria para casamentos, aniversários e eventos corporativos.">
-    <meta property="og:image" content="./assets/hero/hero-01.webp">
+        content="Bar de drinks para eventos em Brasília/DF: casamentos, aniversários e eventos corporativos, com bartenders, coquetelaria e opções sem álcool.">
+    <meta property="og:image" content="https://festdrinkss.com.br/assets/hero/hero-01.webp">
     <meta property="og:image:alt" content="Bar de drinks FestDrinks montado para um evento">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bar de Drinks para Eventos | FestDrinks">
+    <meta name="twitter:title" content="Bar de Drinks para Eventos em Brasília DF | FestDrinks">
     <meta name="twitter:description"
-        content="Bar de drinks, bartenders e coquetelaria para casamentos, aniversários e eventos corporativos.">
-    <meta name="twitter:image" content="./assets/hero/hero-01.webp">
-    <!-- Defina a URL pública antes de publicar: <link rel="canonical" href="https://seudominio.com.br/"> -->
+        content="Bar de drinks para eventos em Brasília/DF: casamentos, aniversários e eventos corporativos, com bartenders, coquetelaria e opções sem álcool.">
+    <meta name="twitter:image" content="https://festdrinkss.com.br/assets/hero/hero-01.webp">
+    <link rel="canonical" href="https://festdrinkss.com.br/">
+    <meta property="og:url" content="https://festdrinkss.com.br/">
     <link rel="icon" href="./assets/icons/fest-drinks.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="preload" as="image" href="./assets/hero/hero-01.webp">
+    <link rel="preload" as="image" href="./assets/hero/hero-01.webp" media="(width &lt; 62rem)" fetchpriority="high">
+    <link rel="preload" as="image" href="./assets/hero/hero-desktop-01.webp" media="(min-width: 62rem)" fetchpriority="high">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/global.css">
@@ -43,11 +45,11 @@
         {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "@id": "#festdrinks",
+            "@id": "https://festdrinkss.com.br/#festdrinks",
             "name": "FestDrinks",
             "description": "Bar de drinks e coquetelaria para casamentos, aniversários, eventos corporativos, formaturas e celebrações especiais.",
-            "image": "./assets/hero/hero-01.webp",
-            "logo": "./assets/logo/logo-fest-drinks.webp",
+            "image": "https://festdrinkss.com.br/assets/hero/hero-01.webp",
+            "logo": "https://festdrinkss.com.br/assets/logo/logo-fest-drinks.webp",
             "knowsAbout": [
                 "bar de drinks para eventos",
                 "coquetelaria para casamentos",
@@ -55,7 +57,48 @@
             ],
             "sameAs": [
                 "https://www.instagram.com/fest.drinkss/"
-            ]
+            ],
+            "url": "https://festdrinkss.com.br/",
+            "telephone": "+5561992703375",
+            "areaServed": {
+                "@type": "City",
+                "name": "Brasília",
+                "containedInPlace": {
+                    "@type": "AdministrativeArea",
+                    "name": "Distrito Federal"
+                }
+            },
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Serviços FestDrinks",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Bar e coquetelaria para eventos",
+                            "serviceType": "Bar para casamentos, aniversários e eventos corporativos, com drinks com e sem álcool",
+                            "provider": {
+                                "@id": "https://festdrinkss.com.br/#festdrinks"
+                            },
+                            "areaServed": {
+                                "@type": "City",
+                                "name": "Brasília"
+                            }
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Aluguel de taças, copos e canecas de Moscow Mule",
+                            "provider": {
+                                "@id": "https://festdrinkss.com.br/#festdrinks"
+                            }
+                        }
+                    }
+                ]
+            }
         }
     </script>
 </head>
@@ -110,7 +153,7 @@
                 <div class="about-copy reveal">
                     <p class="eyebrow">Quem somos</p>
                     <h2 id="about-title">Celebramos histórias em cada detalhe.</h2>
-                    <p>Somos um bar de coquetelaria para eventos que combina técnica, hospitalidade e uma apresentação
+                    <p>Somos um bar de coquetelaria para eventos em Brasília/DF que combina técnica, hospitalidade e uma apresentação
                         inesquecível.</p>
                     <p>Da escolha da carta ao último brinde, criamos uma experiência fluida e personalizada para seus
                         convidados.</p><button class="button button-dark" type="button" data-open-budget>Solicitar
@@ -206,7 +249,7 @@
                         data-filter="brandy" aria-pressed="false">Brandy</button><button type="button"
                         data-filter="pisco" aria-pressed="false">Pisco</button><button type="button"
                         data-filter="mao-de-obra" aria-pressed="false">Mão de obra</button><button type="button"
-                        data-filter="balcoes" aria-pressed="false">Balcões</button></div>
+                        data-filter="balcoes" aria-pressed="false">Balcões</button><button type="button" data-filter="aluguel-tacas" aria-pressed="false">Aluguel de taças</button></div>
                 <div class="drinks-grid" data-drinks-grid aria-live="polite"></div>
             </div>
         </section>
@@ -289,14 +332,13 @@
                 <h2 id="budget-title">Conte sobre o seu evento.</h2>
             </div>
             <form id="budget-form" data-budget-form novalidate>
-                <div class="form-grid"><label class="field field-wide">Nome <input name="nome" type="text"
-                            autocomplete="name" required><span class="field-error"></span></label><label
-                        class="field">Data do evento <input name="data" type="date" required><span
-                            class="field-error"></span></label><label class="field">Horário <input name="horario"
-                            type="time" required><span class="field-error"></span></label><label
-                        class="field">Quantidade de pessoas <input name="convidados" type="number" min="1"
-                            inputmode="numeric" required><span class="field-error"></span></label><label
-                        class="field">Tipo do evento <select name="tipo" required>
+                <div class="form-grid"><label class="field field-wide">Nome <input name="nome" aria-describedby="erro-nome" type="text"
+                            autocomplete="name" required><span class="field-error" id="erro-nome"></span></label><label
+                        class="field">Data do evento <input name="data" aria-describedby="erro-data" type="date" required><span class="field-error" id="erro-data"></span></label><label class="field">Horário <input name="horario" aria-describedby="erro-horario"
+                            type="time" required><span class="field-error" id="erro-horario"></span></label><label
+                        class="field">Quantidade de pessoas <input name="convidados" aria-describedby="erro-convidados" type="number" min="1"
+                            inputmode="numeric" required><span class="field-error" id="erro-convidados"></span></label><label
+                        class="field">Tipo do evento <select name="tipo" aria-describedby="erro-tipo" required>
                             <option value="">Selecione</option>
                             <option>Casamento</option>
                             <option>Aniversário</option>
@@ -304,12 +346,12 @@
                             <option>Corporativo</option>
                             <option>Confraternização</option>
                             <option>Outro</option>
-                        </select><span class="field-error"></span></label></div>
-                <fieldset class="budget-drinks">
+                        </select><span class="field-error" id="erro-tipo"></span></label></div>
+                <fieldset class="budget-drinks" aria-describedby="erro-itens">
                     <legend data-budget-legend>Escolha os itens</legend>
                     <p data-budget-help>Itens organizados por categoria. Selecione o que deseja incluir.</p>
                     <div class="budget-drink-list" data-budget-drinks></div><span class="field-error"
-                        data-drinks-error></span>
+                        id="erro-itens" data-drinks-error aria-live="polite"></span>
                 </fieldset><button class="button button-primary form-submit" type="submit">Enviar pelo WhatsApp</button>
             </form>
         </div>

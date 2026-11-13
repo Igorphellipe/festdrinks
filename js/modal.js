@@ -30,7 +30,7 @@ export function initModals() {
     let budgetView = "catalog";
     let activeCategory = "";
 
-    const categoryOrder = ["gin", "vodka", "cachaca", "sem-alcool", "espumantes", "rum", "whisky", "tequila", "amaretto", "brandy", "pisco", "mao-de-obra", "balcoes"];
+    const categoryOrder = ["gin", "vodka", "cachaca", "sem-alcool", "espumantes", "rum", "whisky", "tequila", "amaretto", "brandy", "pisco", "mao-de-obra", "balcoes", "aluguel-tacas"];
     const byName = (a, b) => a.nome.localeCompare(b.nome, "pt-BR");
     const createBudgetButton = (drink) => {
         const button = document.createElement("button");

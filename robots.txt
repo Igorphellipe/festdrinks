@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Adicione aqui a linha Sitemap quando o dominio publico estiver definido:
-# Sitemap: https://seu-dominio.com.br/sitemap.xml
+Sitemap: https://festdrinkss.com.br/sitemap.xml
